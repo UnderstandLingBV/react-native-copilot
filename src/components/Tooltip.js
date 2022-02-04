@@ -30,6 +30,7 @@ const Tooltip = ({
   labelsBottom
 }: Props) => (
   <View style={{flex: 1}}>
+    <Text onPress={handleStop} style={{position: 'absolute', right: 2, top: 2}}>X</Text>
     {labelsBottom !== false ? <ScrollView style={styles.tooltipContainer}>
       <Text testID="stepDescription" style={styles.tooltipText} adjustsFontSizeToFit>{currentStep.text}</Text>
     </ScrollView> : null }
