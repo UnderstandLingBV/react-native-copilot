@@ -30,9 +30,9 @@ const Tooltip = ({
   labelsBottom
 }: Props) => (
   <View>
-    {labelsBottom !== false ? <ScrollView style={styles.tooltipContainer}>
+    {labelsBottom !== false ? <View style={styles.tooltipContainer}>
       <Text testID="stepDescription" style={styles.tooltipText} adjustsFontSizeToFit>{currentStep.text}</Text>
-    </ScrollView> : null }
+    </View> : null }
     <View style={[styles.bottomBar]}>
       {
         !isLastStep ?
@@ -58,9 +58,9 @@ const Tooltip = ({
           </TouchableOpacity>
       }
     </View>
-    {labelsBottom === false ? <ScrollView style={styles.tooltipContainer}>
+    {labelsBottom === false ? <View style={styles.tooltipContainer}>
       <Text testID="stepDescription" adjustsFontSizeToFit style={styles.tooltipText}>{currentStep.text}</Text>
-    </ScrollView> : null }
+    </View> : null }
   </View>
 );
 
