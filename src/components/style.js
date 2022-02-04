@@ -64,7 +64,7 @@ export default StyleSheet.create({
     color: '#27ae60',
   },
   bottomBar: {
-    marginTop: 10,
+    marginVertical: 1,
     flexDirection: 'row',
     justifyContent: 'flex-end',
   },
