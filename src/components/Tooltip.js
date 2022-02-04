@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 
 import Button from './Button';
 
@@ -30,9 +30,9 @@ const Tooltip = ({
   labelsBottom
 }: Props) => (
   <View>
-    {labelsBottom !== false ? <View style={styles.tooltipContainer}>
-      <Text testID="stepDescription" adjustsFontSizeToFit style={styles.tooltipText}>{currentStep.text}</Text>
-    </View> : null }
+    {labelsBottom !== false ? <ScrollView style={styles.tooltipContainer}>
+      <Text testID="stepDescription" style={styles.tooltipText} adjustsFontSizeToFit>{currentStep.text}</Text>
+    </ScrollView> : null }
     <View style={[styles.bottomBar]}>
       {
         !isLastStep ?
@@ -58,9 +58,9 @@ const Tooltip = ({
           </TouchableOpacity>
       }
     </View>
-    {labelsBottom === false ? <View style={styles.tooltipContainer}>
-      <Text testID="stepDescription" style={styles.tooltipText}>{currentStep.text}</Text>
-    </View> : null }
+    {labelsBottom === false ? <ScrollView style={styles.tooltipContainer}>
+      <Text testID="stepDescription" adjustsFontSizeToFit style={styles.tooltipText}>{currentStep.text}</Text>
+    </ScrollView> : null }
   </View>
 );
 
