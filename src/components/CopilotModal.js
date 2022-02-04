@@ -25,6 +25,7 @@ type Props = {
   androidStatusBarVisible: boolean,
   backdropColor: string,
   labels: Object,
+  labelsBottom: Boolean,
   svgMaskPath?: SvgMaskPathFn,
   stopOnOutsideClick?: boolean,
   arrowColor?: string,
@@ -57,6 +58,7 @@ class CopilotModal extends Component<Props, State> {
     androidStatusBarVisible: false,
     backdropColor: 'rgba(0, 0, 0, 0.4)',
     labels: {},
+    labelsBottom: true,
     stopOnOutsideClick: false,
     arrowColor: '#fff',
   };
@@ -293,6 +295,7 @@ class CopilotModal extends Component<Props, State> {
           handlePrev={this.handlePrev}
           handleStop={this.handleStop}
           labels={this.props.labels}
+          labelsBottom={this.props.labelsBottom}
         />
       </Animated.View>,
     ];
