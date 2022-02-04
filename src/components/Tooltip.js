@@ -16,6 +16,7 @@ type Props = {
   handleStop: func,
   currentStep: Step,
   labels: Object,
+  labelsBottom: boolean
 };
 
 const Tooltip = ({
@@ -26,11 +27,12 @@ const Tooltip = ({
   handleStop,
   currentStep,
   labels,
+  labelsBottom
 }: Props) => (
   <View>
-    <View style={styles.tooltipContainer}>
+    {labelsBottom !== false ? <View style={styles.tooltipContainer}>
       <Text testID="stepDescription" style={styles.tooltipText}>{currentStep.text}</Text>
-    </View>
+    </View> : null }
     <View style={[styles.bottomBar]}>
       {
         !isLastStep ?
@@ -56,6 +58,9 @@ const Tooltip = ({
           </TouchableOpacity>
       }
     </View>
+    {labelsBottom === false ? <View style={styles.tooltipContainer}>
+      <Text testID="stepDescription" style={styles.tooltipText}>{currentStep.text}</Text>
+    </View> : null }
   </View>
 );
 
