@@ -35,6 +35,8 @@ export default StyleSheet.create({
   },
   tooltipContainer: {
     flex: 1,
+    maxHeight: '50%',
+    minHeight: '25%'
   },
   stepNumberContainer: {
     position: 'absolute',
