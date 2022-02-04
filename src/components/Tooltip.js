@@ -31,7 +31,7 @@ const Tooltip = ({
 }: Props) => (
   <View style={{flex: 1}}>
     {labelsBottom !== false ? <ScrollView style={styles.tooltipContainer}>
-      <Button onPress={handleStop} style={{position: 'absolute', right: 2, top: 2}}>Close</Button>
+      <Button onPress={handleStop} style={{position: 'absolute', right: 2, top: 2}}>X</Button>
       <Text testID="stepDescription" style={styles.tooltipText} adjustsFontSizeToFit>{currentStep.text}</Text>
     </ScrollView> : null }
     <View style={[styles.bottomBar]}>
